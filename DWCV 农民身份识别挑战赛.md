@@ -40,5 +40,19 @@
 ### 2. Baseline调参
 
 + 阅读baseline代码：源码只训练了1个epoch
+
 + 调整batchsize（32），epoch（20），重新训练
-+ 训练结果：
+
++ 训练结果：loss 0.322, train_acc 0.868, val_acc 0.862
+
+  ![image-20230806173121616](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20230806173121616.png)
+
++ 提交结果：0.58331
+
+  ![image-20230806173540228](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20230806173540228.png)
+
+### 3. 下一步
+
++ 查看数据集，了解数据
++ 了解哪些情况影响macro-f1值，如何提高macro-f1
++ 优化optimizer的参数，因为训练后期损失降不下去

@@ -51,8 +51,20 @@
 
   ![image-20230806173540228](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20230806173540228.png)
 
-### 3. 下一步
+### 3. optimizer+数据增强
 
-+ 查看数据集，了解数据
-+ 了解哪些情况影响macro-f1值，如何提高macro-f1
-+ 优化optimizer的参数，因为训练后期损失降不下去
+#### 3.1 优化optimizer的参数
+
++ 优化器改为adam，使用先线性增长再余弦下降的lr_scheduler
+
+#### 3.2 数据探索
+
++ 标签是否分布平衡
+  + 不平衡，有的类别少则六七百，而最多的类别有1578个样本。
++ 进行数据增强
+  + 将每个类别都进行数据增强，包括对比度+亮度增强、水平翻转、旋转30度等
+  + 使各类别的样本数一致，都为1578
+
+#### 3.3 macro-f1
+
+![image-20230809221751031](C:\Users\ASUS\AppData\Roaming\Typora\typora-user-images\image-20230809221751031.png)
